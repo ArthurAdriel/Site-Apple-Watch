@@ -25,17 +25,17 @@ nav {
   font-size: 13px;
 }
 
+/* QuerySelector */
 nav ul {
   display: flex;
-  list-style: none;
   justify-content: space-between;
+  /* max-width: 1000px;
+  margin: 0 auto; */
   align-items: center;
 }
 
 ul {
   list-style: none;
-  display: flex;
-  gap: 16px;
 }
 
 li {
@@ -47,6 +47,7 @@ svg {
 }
 
 main {
+  /* max-width: 1000px; */
   margin-bottom: 48px;
 }
 
@@ -61,7 +62,7 @@ a:hover {
 
 #produto {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
 }
 
 #precos {
@@ -69,11 +70,12 @@ a:hover {
 }
 
 #a-vista,
-#parcelas, .pequeno {
+#parcelas,
+.pequeno {
   font-size: 12.8px;
 }
 
-.cinza{
+.cinza {
   color: #6e6e73;
 }
 
@@ -87,11 +89,17 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 4px;
+
+  & img {
+    width: 25px;
+  }
 }
 
-#selo-carbono img {
+/* Nesting ou Aninhamento */
+
+/* #selo-carbono img {
   width: 25px;
-}
+} */
 
 input[type="radio"] {
   display: none;
@@ -102,7 +110,7 @@ input[type="radio"] {
   gap: 10px;
 }
 
-#selecao-cores label{
+#selecao-cores label {
   width: 40px;
   height: 40px;
   display: flex;
@@ -126,7 +134,8 @@ input[type="radio"]:checked + label {
   border-radius: 50%;
 }
 
-#opcoes-tamanho input[type="radio"]:checked + label {
+#opcoes-tamanho input[type="radio"]:checked + label,
+input[type="radio"]:checked + label {
   border: solid 2px #0066cc;
 }
 
@@ -136,24 +145,18 @@ input[type="radio"]:checked + label {
   border-bottom: solid 2px #6e6e7399;
 }
 
-#opcoes{
+#opcoes {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-#tamanho-caixa{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#opcoes-tamanho{
+#opcoes-tamanho {
   display: flex;
   gap: 10px;
 }
 
-#opcoes-tamanho label{
+#opcoes-tamanho label {
   border: solid 1px black;
   padding: 30px 50px;
   border-radius: 16px;
@@ -162,25 +165,27 @@ input[type="radio"]:checked + label {
   cursor: pointer;
 }
 
-#info-extra, .comprar-depois{
+#info-extra,
+.comprar-depois,
+#tamanho-caixa {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.entrega{
+.entrega {
   display: flex;
   gap: 16px;
   align-items: flex-start;
 }
 
-.informacoes-entrega{
+.informacoes-entrega {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
 
-button{
+button {
   background-color: #0071e3;
   color: white;
   font-size: 17.6px;
@@ -192,21 +197,25 @@ button{
 }
 
 button:hover {
-  background-color: #057bf1;  
+  background-color: #057bf1;
 }
 
-.salvar-depois{
+.salvar-depois {
   display: flex;
   gap: 3px;
 }
 
-#selecionar-imagem label img{
+#selecionar-imagem label img {
   width: 46px;
   cursor: pointer;
 }
 
-#selecionar-imagem{
+#selecionar-imagem {
   display: flex;
   gap: 25px;
   justify-content: center;
+}
+
+.caixa-pequena {
+  transform: scale(0.9);
 }
